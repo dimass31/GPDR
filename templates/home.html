@@ -4,8 +4,14 @@
         <title>Главная</title>
     </head>
     <body>
-        <h1>Главная</h1>
+        <h1><a href="/">Главная</a></h1>
+    
+    <p><a href="/login">Войти</a></p>
+    <p><a href="/signup">Зарегестрироваться</a></p>
+
+    {% if login %}
+            <p>{{ login }}</p>
+    {% endif %}
+    
     </body>
-    <p>Зарегестрироваться</p>
-    <p>Войти</p>
 </html>
