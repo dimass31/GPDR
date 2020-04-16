@@ -10,7 +10,6 @@ def index():
         pass
         try:
             login = request.args['login']
-            print(login)
             return render_template('home.html', login=login)
         except:
             return render_template('home.html')
@@ -27,6 +26,10 @@ def login():
 def signup():
     if request.method == 'POST':
         login = request.form.get('login')
+        password = request.form.get('pass1')
+        file = open('bd.txt', 'a')
+        file.write('\n'+login+" "+password)
+        file.close()
         return redirect(url_for('index', login=login))
     return render_template('signup.html')
 

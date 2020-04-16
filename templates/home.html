@@ -4,6 +4,26 @@
         <title>Главная</title>
     </head>
     <body>
+    <script>
+        alert('Мы используем куки')
+        function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+        }
+
+        const login = getCookie('login');
+        console.log(login);
+    </script>
         <h1><a href="/">Главная</a></h1>
     
     <p><a href="/login">Войти</a></p>
