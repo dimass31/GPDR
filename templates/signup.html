@@ -29,7 +29,7 @@
         let pass1 = document.getElementById("pass1");
         let pass2 = document.getElementById("pass2");
         let login = document.getElementById("login");
+        if (login.value == "" && pass1.value && pass2.value) alert('Поля не заполнены');
         if (pass1.value != pass2.value) alert('Пароли не совподают');
-        //document.cookie = `login = ${login.value}`;
     }
 </script>
